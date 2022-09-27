@@ -1,0 +1,332 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/** Begin index styling */
+
+/* general styling */
+
+:root {
+  --darkBlue: #03045e;
+  --navyBlue: #023e8a;
+  --seaBlue: #00b4d8;
+  --skyBlue: #caf0f8;
+  --white: #f8f9fa;
+}
+
+body {
+  font-size: 1rem;
+  /*font-family: "Poppins", sans-serif;*/
+  line-height: 1.5;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--darkBlue);
+  color: var(--white);
+  border-collapse: collapse;
+}
+
+header {
+  padding: 5px;
+  margin: 0px;
+  /*border-bottom: 1px solid var(--seaBlue);*/
+  width: 100vw;
+  background-color: var(--navyBlue);
+}
+
+section {
+  padding: 5% 10%;
+  z-index: 1;
+}
+
+h1 {
+  font-style: bold;
+  font-size: 5rem;
+  margin: 0.625rem 0px;
+  padding: 0 none;
+  font-variant-caps: all-petite-caps;
+  /*font-family: "Oswald", sans-serif;*/
+}
+
+h2 {
+  /*font-family: "Bebas Neue", cursive, sans-serif;*/
+  font-size: 1.25rem;
+  margin: 00.625rem 0px;
+  padding: 0 none;
+}
+
+h3 {
+  /*font-family: "Bebas Neue", cursive, sans-serif;*/
+  font-size: 0.75rem;
+  margin: 00.625rem 0px;
+  padding: 0 none;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Button styling */
+
+button {
+  background-color: var(--seaBlue);
+  color: var(--darkBlue);
+  border: 1px solid var(--darkBlue);
+  font-variant-caps: all-petite-caps;
+}
+
+/*Nav section */
+
+.mainNav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.navUl {
+  list-style-type: none;
+  padding: 0px 25px;
+  margin: 0%;
+}
+
+.navLi {
+  display: inline-block;
+  margin: 0;
+  padding: 0px 5px;
+}
+
+.navLi > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navLi > a:active,
+.navLi > a:visited {
+  color: inherit;
+}
+
+/*Nav end section*/
+
+/*Graphic intro section */
+.introGraphic {
+  background-color: var(--darkBlue);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.introGraphic::after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  background: inherit;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform-origin: top right;
+  transform: skewY(-4deg);
+}
+
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  line-height: 1;
+}
+
+.nameTitle {
+  margin-bottom: 0px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  /*margin-top: 0px;*/
+  color: var(--seaBlue);
+}
+
+#introPara {
+  margin: 2.5% 0%;
+  padding: 0%;
+}
+
+.contactBtn {
+  padding: 10px 15px;
+}
+
+/**Projects section */
+
+.projects {
+  padding-top: 10%;
+  background-color: var(--skyBlue);
+  color: var(--darkBlue);
+}
+
+.projectsLayout {
+  margin: 5% 0%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, minmax(75px, 1fr));
+  grid-gap: 5%;
+}
+
+.individualProject {
+  width: 100%;
+  max-width: 250px;
+  min-width: 100px;
+  height: 100%;
+  max-height: 300px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background-color: var(--darkBlue);
+  /*border: 1px solid var(--darkBlue);*/
+  text-align: center;
+}
+
+.projectImage {
+  width: calc(100% - 40px);
+  height: calc(100% - 60px);
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid var(--darkBlue);
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.projectSmallTitle {
+  margin: 5px;
+  margin-bottom: 15px;
+  color: var(--white);
+  font-size: 00.75rem;
+}
+
+/**about me section*/
+
+.innerAboutLayout {
+  margin: 0%;
+  display: grid;
+  grid-template-columns: 1fr;
+  /*grid-template-rows: 1fr;
+  grid-gap: 5%;*/
+  justify-items: center;
+}
+
+/*
+#aboutMeTitle {
+  margin-bottom: 5%;
+}*/
+
+.innerAboutLayout h3 {
+  color: var(--seaBlue);
+  margin-top: 5%;
+}
+
+#degree {
+  margin: 5px 0px;
+}
+
+#degreeDates {
+  margin: 5px 0px;
+}
+
+/*
+#educationOverview {
+  margin-bottom: 5%;
+}*/
+
+.skills {
+  width: 100%;
+}
+
+.skills li {
+  font-weight: 300;
+}
+
+/*footer styling*/
+
+footer {
+  background-color: var(--navyBlue);
+  padding: 2.5% 10%;
+  /*margin-top: 5%;*/
+}
