@@ -224,6 +224,9 @@ button {
 #introPara {
   margin: 2.5% 0%;
   padding: 0%;
+  width: 100%;
+  min-width: 100px;
+  max-width: 550px;
 }
 
 .contactBtn {
@@ -246,13 +249,23 @@ button {
   grid-gap: 5%;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited,
+a:active {
+  color: none;
+  text-decoration: none;
+}
+
 .individualProject {
   width: 100%;
   max-width: 250px;
   min-width: 100px;
   height: 100%;
   max-height: 300px;
-  min-height: 250px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -272,6 +285,13 @@ button {
   border: 1px solid var(--darkBlue);
   margin-top: 25px;
   margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.projectImage > img {
+  width: 100%;
+  height: auto;
+  align-self: center;
 }
 
 .projectSmallTitle {
@@ -329,4 +349,146 @@ footer {
   background-color: var(--navyBlue);
   padding: 2.5% 10%;
   /*margin-top: 5%;*/
+}
+
+/*!*/
+/* ProjPage styling */
+
+.projPage {
+  background-color: var(--white);
+  color: var(--navyBlue);
+}
+
+/*
+.projPage section {
+  padding: 2.5% 5%;
+}*/
+
+.projTitleBlock {
+  padding: 0%;
+  width: 100%;
+  background-color: var(--darkBlue);
+  color: var(--white);
+  padding-bottom: 2.5%;
+}
+
+.projPageTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projTitle {
+  /*margin-right: 5%;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*color: var(--navyBlue);*/
+}
+
+.projTitle > h1,
+.projTitle > h2,
+.projTitle > h3,
+.projTitle > button {
+  margin: 5px 0px;
+}
+
+.pageLink {
+  width: 100px;
+  height: 40px;
+  padding: 5px;
+}
+
+.projectBigTitle {
+  font-variant-caps: all-small-caps;
+}
+
+.author {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.date {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.projPageArtwork {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.projPageArtwork img {
+  align-self: center;
+}
+
+/**projPageoverview*/
+
+.projOverview {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.overviewArt {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 45px;
+  width: 100%;
+  /*width: 400px;*/
+}
+
+.artContainer {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.artContainer > img {
+  width: 100%;
+}
+
+.overviewText {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 850px;
+}
+
+.overviewPara {
+  width: 100%;
+  text-align: left;
+}
+
+/* Challenges and highlights */
+
+.challengesHighlights {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.challenges {
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.challengesList,
+.highlightsList {
+  list-style: circle;
+  line-height: 1.5;
 }
