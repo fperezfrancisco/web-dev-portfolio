@@ -110,7 +110,7 @@ section {
 
 h1 {
   font-style: bold;
-  font-size: 5rem;
+  font-size: 6rem;
   margin: 0.625rem 0px;
   padding: 0 none;
   font-variant-caps: all-petite-caps;
@@ -185,11 +185,17 @@ button {
 
 /*Graphic intro section */
 .introGraphic {
-  background-color: var(--darkBlue);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(3%2c 4%2c 94%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c492.528C90.87%2c504.443%2c169.689%2c433.539%2c246.021%2c382.816C321.286%2c332.802%2c409.18%2c285.821%2c439.289%2c200.617C468.886%2c116.863%2c408.126%2c30.841%2c401.708%2c-57.757C394.615%2c-155.678%2c450.92%2c-262.576%2c399.671%2c-346.317C347.857%2c-430.982%2c240.006%2c-468.823%2c141.705%2c-482.604C49.959%2c-495.466%2c-38.537%2c-457.21%2c-123.211%2c-419.62C-198.759%2c-386.081%2c-265.804%2c-339.691%2c-320.27%2c-277.516C-374.968%2c-215.077%2c-427.303%2c-145.236%2c-435.901%2c-62.673C-444.369%2c18.644%2c-408.202%2c97.039%2c-366.605%2c167.423C-328.082%2c232.606%2c-264.432%2c273.078%2c-207.782%2c323.315C-139.571%2c383.805%2c-90.395%2c480.676%2c0%2c492.528' fill='%2302034b'%3e%3c/path%3e%3cpath d='M1440 1093.126C1538.413 1092.978 1581.708 961.668 1669.282 916.77 1771.501 864.364 1916.999 899.8779999999999 1989.97 811.163 2063.264 722.056 2047.52 589.203 2032.851 474.76099999999997 2018.019 359.049 1982.252 244.497 1906.017 156.19400000000002 1829.709 67.80599999999998 1723.826 5.9220000000000255 1609.137-16.02800000000002 1499.884-36.93799999999999 1394.225 9.44500000000005 1286.624 37.649 1175.517 66.77199999999999 1042.362 63.49200000000002 968.9010000000001 151.79000000000002 895.557 239.947 912.215 369.848 914.858 484.496 917.149 583.896 927.082 686.52 983.12 768.65 1035.192 844.9680000000001 1134.949 863.963 1210.275 917.46 1290.493 974.431 1341.61 1093.274 1440 1093.126' fill='%23040571'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: relative;
   box-sizing: border-box;
+  padding: 5% 10%;
+  height: 75vh;
 }
 
+/*
 .introGraphic::after {
   z-index: -1;
   position: absolute;
@@ -201,9 +207,17 @@ button {
   right: 0;
   transform-origin: top right;
   transform: skewY(-4deg);
+}*/
+
+.introGraphicArt {
+  width: 100%;
+  max-width: 500px;
+  min-width: none;
+  margin-left: 25px;
 }
 
 .introContainer {
+  /*background-color: #023e8a;*/
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -236,7 +250,7 @@ button {
 /**Projects section */
 
 .projects {
-  padding-top: 10%;
+  /*padding-top: 10%;*/
   background-color: var(--skyBlue);
   color: var(--darkBlue);
 }
@@ -365,11 +379,14 @@ footer {
 }*/
 
 .projTitleBlock {
-  padding: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  padding: 5% 10%;
   width: 100%;
-  background-color: var(--darkBlue);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(3%2c 4%2c 94%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c492.528C90.87%2c504.443%2c169.689%2c433.539%2c246.021%2c382.816C321.286%2c332.802%2c409.18%2c285.821%2c439.289%2c200.617C468.886%2c116.863%2c408.126%2c30.841%2c401.708%2c-57.757C394.615%2c-155.678%2c450.92%2c-262.576%2c399.671%2c-346.317C347.857%2c-430.982%2c240.006%2c-468.823%2c141.705%2c-482.604C49.959%2c-495.466%2c-38.537%2c-457.21%2c-123.211%2c-419.62C-198.759%2c-386.081%2c-265.804%2c-339.691%2c-320.27%2c-277.516C-374.968%2c-215.077%2c-427.303%2c-145.236%2c-435.901%2c-62.673C-444.369%2c18.644%2c-408.202%2c97.039%2c-366.605%2c167.423C-328.082%2c232.606%2c-264.432%2c273.078%2c-207.782%2c323.315C-139.571%2c383.805%2c-90.395%2c480.676%2c0%2c492.528' fill='%2302034b'%3e%3c/path%3e%3cpath d='M1440 1093.126C1538.413 1092.978 1581.708 961.668 1669.282 916.77 1771.501 864.364 1916.999 899.8779999999999 1989.97 811.163 2063.264 722.056 2047.52 589.203 2032.851 474.76099999999997 2018.019 359.049 1982.252 244.497 1906.017 156.19400000000002 1829.709 67.80599999999998 1723.826 5.9220000000000255 1609.137-16.02800000000002 1499.884-36.93799999999999 1394.225 9.44500000000005 1286.624 37.649 1175.517 66.77199999999999 1042.362 63.49200000000002 968.9010000000001 151.79000000000002 895.557 239.947 912.215 369.848 914.858 484.496 917.149 583.896 927.082 686.52 983.12 768.65 1035.192 844.9680000000001 1134.949 863.963 1210.275 917.46 1290.493 974.431 1341.61 1093.274 1440 1093.126' fill='%23040571'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
   color: var(--white);
-  padding-bottom: 2.5%;
 }
 
 .projPageTitle {
